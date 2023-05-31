@@ -1,0 +1,789 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Table</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel='stylesheet' href='css/styles.css' />
+    <link rel='stylesheet' media="print" href='css/styles.css' />
+</head>
+
+<body>
+
+
+
+</body>
+
+<div class='wrap'>
+
+    <div class='header'>
+        <div class='hl center'>
+            <img src="img/header_logos.png" alt="">
+        </div>
+        <div class='hr'>
+            <img src='https://picsum.photos/id/1041/600/600' width='' height='' alt='img'>
+        </div>
+    </div>
+
+    <div class='title1'>
+        RAPPORT D'EXPERTISE EN EVALUATION IMMOBILIERE SYNTHETIQUE
+    </div>
+
+    <div class='center padd font_small'>
+        Cette expertise en évaluation respecte la Directive Européenne n°2014/17/UE publiée au JO le 28/02/2014 et
+        agréée par la Banque Centrale Européenne. Notre mission a été traitée selon les règles de méthodologie et de
+        déontologie édictées par la Charte Française de l'Expertise en évaluation immobilière, TEGoVA (The European
+        Group of Valuers’Associations) et la RICS (The Royal Institution of Chartered Surveyors).
+    </div>
+
+    <table class="tab_alternating col6">
+        <tr>
+            <td colspan="6" class="title2">
+                REFERENCES DE LA DEMANDE
+            </td>
+        </tr>
+        <tr>
+            <td>Nom / Ref Client (s):</td>
+            <td>{{ nom_ref_client }}</td>
+            <td>Référence Bien / Dossier:</td>
+            <td>{{ reference_bien_dossier }}</td>
+            <td colspan="2"></td>
+        </tr>
+
+        <tr>
+            <td colspan="6" class="title2">
+                PRESENTATION DU BIEN
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="6" class="title3">
+                IDENTIFICATION/SITUATION JURIDIQUE
+            </td>
+        </tr>
+
+        <tr>
+            <td>Type de bien:</td>
+            <td>{{ type_de_bien }}</td>
+            <td>Situation juridique:</td>
+            <td>{{ situation_juridique }}</td>
+            <td>Google Map:</td>
+            <td><a href="#">Google Map</a></td>
+        </tr>
+        <tr>
+            <td>Adresse:</td>
+            <td colspan="3">{{ adresse }}</td>
+            <td>Code postal:</td>
+            <td>{{ code_postal }}</td>
+            <!-- <td>Ville, Code postal:</td>
+            <td>{{ ville }}, {{ code_postal }}</td> -->
+        </tr>
+        <tr>
+            <td>Ville:</td>
+            <td>{{ ville }}</td>
+            <td>Région:</td>
+            <td>{{ region }}</td>
+            <td>Département:</td>
+            <td>{{ departement }}</td>
+        </tr>
+        <tr>
+            <td>Terrain cadastré:</td>
+            <td colspan="3">{{ terrain_cadastre }}</td>
+            <td>Contenance:</td>
+            <td>{{ contenence }}</td>
+        </tr>
+        <tr>
+            <td>Liens Cadastre (1 par lot)</td>
+            <td colspan="6">
+                <div class='liens_cadastre'>
+                    <div><a href="{{ liens_cadastre_1 }}">{{ liens_cadastre_1 }}</a></div>
+                    <div><a href="{{ liens_cadastre_2 }}">{{ liens_cadastre_2 }}</a></div>
+                    <div><a href="{{ liens_cadastre_3 }}">{{ liens_cadastre_3 }}</a></div>
+                    <div><a href="{{ liens_cadastre_4 }}">{{ liens_cadastre_4 }}</a></div>
+                    <div><a href="{{ liens_cadastre_5 }}">{{ liens_cadastre_5 }}</a></div>
+                    <div><a href="{{ liens_cadastre_6 }}">{{ liens_cadastre_6 }}</a></div>
+                    <div><a href="{{ liens_cadastre_7 }}">{{ liens_cadastre_7 }}</a></div>
+                    <div><a href="{{ liens_cadastre_8 }}">{{ liens_cadastre_8 }}</a></div>
+                    <div><a href="{{ liens_cadastre_9 }}">{{ liens_cadastre_9 }}</a></div>
+                </div>
+            </td>
+
+        </tr>
+
+        <tr>
+            <td colspan="6" class="title3">
+                SITUATION GEOGRAPHIQUE
+            </td>
+        </tr>
+
+        <tr>
+            <td>Population:</td>
+            <td>{{ population }}</td>
+            <td>Évolution annuelle (2012-17):</td>
+            <td>{{ evolution_annuelle }}</td>
+            <td>Densité au km² de l'IRIS:</td>
+            <td>{{ densite au_km2 }}</td>
+        </tr>
+        <tr>
+            <td>Nombre de logements: <span class="right">Maisons:</span></td>
+            <td>{{ maisons }}</td>
+            <td class="normal">Appartements:</td>
+            <td>{{ appartements }}</td>
+            <td colspan="2"></td>
+        </tr>
+        <tr>
+            <td>Profil zone économique:</td>
+            <td>{{ profil_zone_economique }}</td>
+            <td>Profil de la commune:</td>
+            <td>{{ profil_de_la_comune }}</td>
+            <td>Chômage (2017):</td>
+            <td>{{ chomage_2017 }}</td>
+        </tr>
+        <tr>
+            <td>Distance du Centre Ville:</td>
+            <td>{{ distance_du_centre_ville }}</td>
+            <td>Urbanisation du Secteur:</td>
+            <td>{{ urbanisation_du_secteur}}</td>
+            <td>Accès routier au bien:</td>
+            <td>{{ acces_routier_au_bien }}</td>
+        </tr>
+        <tr>
+            <td>Altitude du Bien:</td>
+            <td>{{ altitude_du_bien }}</td>
+            <td>Topographie du terrain:</td>
+            <td>{{ topographie_du_terrain }}</td>
+            <td>Dénivelé moyen:</td>
+            <td>{{ denivele_moyen }}</td>
+        </tr>
+        <tr>
+            <td>Situation particulière:</td>
+            <td colspan="3">{{ situation_particuliere }}</td>
+            <td>Facteur(s) de survalorisation:</td>
+            <td>{{ facteurs_de_survalorisation }}</td>
+        </tr>
+        <tr>
+            <td>Code zone d'urbanisme:</td>
+            <td>{{ code_zone_d_urbanisme }}</td>
+            <td>Libellé zone d'urbanisme:</td>
+            <td>{{ libelle_zone_d_urbanisme }}</td>
+            <td colspan="2"></td>
+        </tr>
+        <tr>
+            <td>Risques Naturels:</td>
+            <td>{{ risques_naturels }}</td>
+            <td>Risques Technologiques:</td>
+            <td>{{ risques_technologiques }}</td>
+            <td colspan="2" class="font_small center">{{ details_des_risques_1 }}</td>
+        </tr>
+        <tr>
+            <td>Densité des services:</td>
+            <td>{{ densite_des_services }}</td>
+            <td>Diversité des services:</td>
+            <td>{{ diversite_des_services }}</td>
+            <td colspan="2" class="font_small center">{{ details_des_risques_1 }}</td>
+        </tr>
+
+        <tr>
+            <td colspan="6" class="title3">
+                DESCRIPTION DU BIEN
+            </td>
+        </tr>
+
+        <tr>
+            <td>Superficie du terrain:</td>
+            <td>{{ superficie_du_terrain }}</td>
+            <td>Servitudes:</td>
+            <td>{{ servitudes }}</td>
+            <td>Destination:</td>
+            <td>{{ destination }}</td>
+        </tr>
+        <tr>
+            <td>Nombre de pièces:</td>
+            <td>{{ nombre_de_pieces }}</td>
+            <td>Époque / Année de construction:</td>
+            <td>{{ epoque_annee_de_construction }}</td>
+            <td>Affectation principale:</td>
+            <td>{{ affectation_principale }}</td>
+        </tr>
+        <tr>
+            <td>Matériaux: <span class="right">Murs -></span></td>
+            <td>{{ murs }}</td>
+            <td class="normal">Toiture -></td>
+            <td>{{ toiture }}</td>
+            <td>Qualité du bâti:</td>
+            <td>{{ qualite_du_bati }}</td>
+        </tr>
+        <tr>
+            <td>Étage (si appart):</td>
+            <td>{{ etage_si_appart }}</td>
+            <td>Nb d'étages / hauteur bâti:</td>
+            <td>{{ nb_d_etages}} / {{ hauteur_bati}}</td>
+            <td>Etat général du bien:</td>
+            <td>{{ etat_general_du_bien }}</td>
+        </tr>
+        <tr>
+            <td>Surface bâtie/habitable:</td>
+            <td>{{ surface_batie_habitable }}</td>
+            <td>Présence d'annexe(s):</td>
+            <td>{{ presence_s_annexes }}</td>
+            <td>Type d'annexe(s):</td>
+            <td>{{ type_de_annexes }}</td>
+        </tr>
+        <tr>
+            <td>Etiquette DPE:</td>
+            <td>{{ etiquette_dpe }}</td>
+            <td>Score GES:</td>
+            <td>{{ score_ges }}</td>
+            <td>Risques contamination:</td>
+            <td>{{ risques_contamination }}</td>
+        </tr>
+
+        <tr>
+            <td colspan="6" class="title3">
+                DEMARCHE ECO-RESPONSABLE
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">Certification/label qualité environnementale obtenu:</td>
+            <td>{{ certification_label_qualite_environnementale_obtenu }}</td>
+            <td colspan="2">Equipements spécifiques dévelopt durable*:</td>
+            <td>{{ equipements_specifiques_developt_durable }}</td>
+        </tr>
+        <tr>
+            <td colspan="2">Travaux effectués/prévus éco-responsables**</td>
+            <td>{{ travaux_effectues_prevus_eco_responsables }}</td>
+            <td colspan="4"></td>
+        </tr>
+        <tr>
+            <td colspan="6" class="font_small white">* panneaux photo-voltaïques, géothermie, autre énergie
+                renouvelable,
+                climatisation
+                réversible, autres …; **isolation, matériaux, équipements, autres …</td>
+        </tr>
+    </table>
+
+    <table class="marche">
+        <tr>
+            <td colspan="9" class="title2">
+                DETERMINATION DE LA VALEUR
+            </td>
+        </tr>
+        <tr>
+            <td colspan="9" class="title3">
+                LE MARCHE IMMOBILIER LOCAL (maisons ou appartements selon le type de bien étudié)
+            </td>
+        </tr>
+        <tr>
+            <td>Dynamique de marché:</td>
+            <td class="input">{{ dynamique_de_marche }}</td>
+            <td colspan="3" class="center border">Commune</td>
+            <td colspan="3" class="center border">Communauté de communes</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Niveau de marché:</td>
+            <td class="input">{{ niveau_de_marche }}</td>
+            <td class="center border">S1-2021</td>
+            <td class="center border">S2-2021</td>
+            <td class="center border">% Delta</td>
+            <td class="center border">S1-2021</td>
+            <td class="center border">S2-2021</td>
+            <td class="center border">% Delta</td>
+            <td class="center">Tendance</td>
+        </tr>
+        <tr>
+            <td colspan="2" class="right">Taux de Rotation:</td>
+            <td class="input">{{ taux_de_rotation_commune_s1 }}</td>
+            <td class="input">{{ taux_de_rotation_commune_s2 }}</td>
+            <td class="input">{{ taux_de_rotation_commune_delta }}</td>
+            <td class="input">{{ taux_de_rotation_communaute_s1 }}</td>
+            <td class="input">{{ taux_de_rotation_communaute_s2 }}</td>
+            <td class="input">{{ taux_de_rotation_communaute_delta }}</td>
+            <td class="input">{{ taux_de_rotation_tendance }}</td>
+        </tr>
+        <tr>
+            <td colspan="2" class="right">Nombre de ventes:</td>
+            <td class="input">{{ nombre_de_ventes_commune_s1 }}</td>
+            <td class="input">{{ nombre_de_ventes_commune_s2 }}</td>
+            <td class="input">{{ nombre_de_ventes_commune_delta }}</td>
+            <td class="input">{{ nombre_de_ventes_communaute_s1 }}</td>
+            <td class="input">{{ nombre_de_ventes_communaute_s2 }}</td>
+            <td class="input">{{ nombre_de_ventes_communaute_delta }}</td>
+            <td class="input">{{ nombre_de_ventes_tendance }}</td>
+        </tr>
+        <tr>
+            <td colspan="2" class="right">Prix moyen/m² des biens vendus:</td>
+            <td class="input">{{ prix_moyen_m2_commune_s1 }}</td>
+            <td class="input">{{ prix_moyen_m2_commune_s2 }}</td>
+            <td class="input">{{ prix_moyen_m2_commune_delta }}</td>
+            <td class="input">{{ prix_moyen_m2_communaute_s1 }}</td>
+            <td class="input">{{ prix_moyen_m2_communaute_s2 }}</td>
+            <td class="input">{{ prix_moyen_m2_communaute_delta }}</td>
+            <td class="input">{{ prix_moyen_m2_tendance }}</td>
+        </tr>
+        <tr>
+            <td colspan="2" class="right">Surface Moyenne:</td>
+            <td class="input">{{ surface_moyenne_commune_s1 }}</td>
+            <td class="input">{{ surface_moyenne_commune_s2 }}</td>
+            <td class="input">{{ surface_moyenne_commune_delta }}</td>
+            <td class="input">{{ surface_moyenne_communaute_s1 }}</td>
+            <td class="input">{{ surface_moyenne_communaute_s2 }}</td>
+            <td class="input">{{ surface_moyenne_communaute_delta }}</td>
+            <td class="input">{{ surface_moyenne_tendance }}</td>
+        </tr>
+    </table>
+
+    <table class="evaluation">
+        <tr>
+            <td colspan="9" class="title3">
+                EVALUATION (sur la base des informations obtenues/des hypothèses éventuellement retenues concernant les
+                caractéristiques intrinsèques et extrinsèques du bien sous réserve notamment d’une certification de la
+                surface par géomètre-expert et des risques/contamination)
+            </td>
+        </tr>
+
+        <tr>
+            <td>Base d'Evaluation:</td>
+            <td class="right normal">Occupation supposée:</td>
+            <td colspan="2" class="input">{{ occupation_supposee }}</td>
+            <td class="right normal">Type:</td>
+            <td colspan="2" class="input">{{ evaluation_type }} </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="right normal">Usage supposé:</td>
+            <td colspan="2" class="input">{{ usage_supposee }}</td>
+            <td class="right normal">Frais:</td>
+            <td colspan="2" class="input">{{ evaluation_frais }} </td>
+        </tr>
+        <tr>
+            <td class="center"></td>
+            <td class="center">Estimation</td>
+            <td class="center">Valeur Basse </td>
+            <td class="center">Valeur Haute</td>
+            <td class="center">Prix/m2</td>
+            <td colspan="2"></td>
+        </tr>
+        <tr>
+            <td class="purple font_big">Valeur Amiable:</td>
+            <td class="input font_big bold font_blue">{{ valeur_amiable_estimation }}</td>
+            <td class="input bold font_red">{{ valeur_amiable_valeur_basse }}</td>
+            <td class="input bold font_green">{{ valeur_amiable_valeur_haute }}</td>
+            <td class="input bold font_blue">{{ valeur_amiable_prix_m2 }}</td>
+            <td class="right">Liquidité envisageable:</td>
+            <td class="input">{{ liquidite_envisageable }}</td>
+        </tr>
+        <tr>
+            <td class="purple font_big">Valeur Amiable Forcée:</td>
+            <td class=" input font_big bold font_blue">{{ valeur_amiable_forcee_estimation }}</td>
+            <td class="input bold font_red">{{ valeur_amiable_forcee_valeur_basse }}</td>
+            <td class="input bold font_green">{{ valeur_amiable_forcee_valeur_haute }}</td>
+            <td class="input bold font_blue">{{ valeur_amiable_forcee_prix_m2 }}</td>
+            <td class="right">Délai de vente escomptable:</td>
+            <td class="input">{{ delai_de_vente_escomptable }}</td>
+        </tr>
+        <tr>
+            <td class="purple font_big">Valeur Judiciaire:</td>
+            <td class=" input font_big bold font_blue">{{ valeur_judiciaire_estimation }}</td>
+            <td class="input bold font_red">{{ valeur_judiciaire_valeur_basse }}</td>
+            <td class="input bold font_green">{{ valeur_judiciaire_valeur_haute }}</td>
+            <td class="input bold font_blue">{{ valeur_judiciaire_prix_m2 }}</td>
+            <td class="right">Appréciation risques:</td>
+            <td class="input">{{ appreciation_risques }}</td>
+        </tr>
+        <tr>
+            <td colspan="2" class="right">Date de valeur**:</td>
+            <td class="input">{{ date_de_valeur }}</td>
+            <td class="right">Visa qualité fait le:</td>
+            <td class="input">{{ visa_quality_fait_le }}</td>
+            <td colspan="2"></td>
+        </tr>
+        <tr>
+            <td colspan="7" class="center"><em><u>Cette évaluation a été contrôlée par un Expert certifié RICS, REV
+                        et/ou
+                        Expert judiciaire</u></em> </td>
+        </tr>
+    </table>
+<div style="page-break-after: always"></div>
+    <table class="appendices">
+        <tr>
+            <td colspan="10" class="title1 left">
+                APPENDICES
+            </td>
+        </tr>
+
+        <tr class="pink_bottom">
+            <td colspan="6" class="title4 left">
+                ELEMENTS REFERENCIELS DE VENTE RETENUS
+            </td>
+            <td colspan="3" class="title4 right">
+                Nombre total de ventes analysées:
+            </td>
+            <td class="input">{{ _nombre_total_de_ventes_analysees }}</td>
+        </tr>
+
+        <tr class="thead">
+            <td>#</td>
+            <td>Date</td>
+            <td class="double">Adresse</td>
+            <td>Typologie</td>
+            <td>Surf bâtie/hab </td>
+            <td>Terrain</td>
+            <td>Prix Vente</td>
+            <td>€ / m²</td>
+            <td colspan="2">Liens</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td class="input">{{ date_1 }}</td>
+            <td class="input adresse"><span>{{ adresse_1 }}</span></td>
+            <td class="input">{{ typologie_1 }}</td>
+            <td class="input">{{ surf_batie_hab_1 }}</td>
+            <td class="input">{{ terrain_1 }}</td>
+            <td class="input">{{ prix_ventre_1 }}</td>
+            <td class="input">{{ eur_m2_1 }}</td>
+            <td class="input"><a href="{{ google_map_1 }}">Google map</a></td>
+            <td class="input"><a href="{{ cadastre_1 }}">Cadastre</a></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td class="input">{{ date_2 }}</td>
+            <td class="input adresse"><span>{{ adresse_2 }}</span></td>
+            <td class="input">{{ typologie_2 }}</td>
+            <td class="input">{{ surf_batie_hab_2 }}</td>
+            <td class="input">{{ terrain_2 }}</td>
+            <td class="input">{{ prix_ventre_2 }}</td>
+            <td class="input">{{ eur_m2_2 }}</td>
+            <td class="input"><a href="{{ google_map_2 }}">Google map</a></td>
+            <td class="input"><a href="{{ cadastre_2 }}">Cadastre</a></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td class="input">{{ date_3 }}</td>
+            <td class="input adresse"><span>{{ adresse_3 }}</span></td>
+            <td class="input">{{ typologie_3 }}</td>
+            <td class="input">{{ surf_batie_hab_3 }}</td>
+            <td class="input">{{ terrain_3 }}</td>
+            <td class="input">{{ prix_ventre_3 }}</td>
+            <td class="input">{{ eur_m2_3 }}</td>
+            <td class="input"><a href="{{ google_map_3 }}">Google map</a></td>
+            <td class="input"><a href="{{ cadastre_3 }}">Cadastre</a></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td class="input">{{ date_4 }}</td>
+            <td class="input adresse"><span>{{ adresse_4 }}</span></td>
+            <td class="input">{{ typologie_4 }}</td>
+            <td class="input">{{ surf_batie_hab_4 }}</td>
+            <td class="input">{{ terrain_4 }}</td>
+            <td class="input">{{ prix_ventre_4 }}</td>
+            <td class="input">{{ eur_m2_4 }}</td>
+            <td class="input"><a href="{{ google_map_4 }}">Google map</a></td>
+            <td class="input"><a href="{{ cadastre_4 }}">Cadastre</a></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td class="input">{{ date_5 }}</td>
+            <td class="input adresse"><span>{{ adresse_5 }}</span></td>
+            <td class="input">{{ typologie_5 }}</td>
+            <td class="input">{{ surf_batie_hab_5 }}</td>
+            <td class="input">{{ terrain_5 }}</td>
+            <td class="input">{{ prix_ventre_5 }}</td>
+            <td class="input">{{ eur_m2_5 }}</td>
+            <td class="input"><a href="{{ google_map_5 }}">Google map</a></td>
+            <td class="input"><a href="{{ cadastre_5 }}">Cadastre</a></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td class="input">{{ date_6 }}</td>
+            <td class="input adresse"><span>{{ adresse_6 }}</span></td>
+            <td class="input">{{ typologie_6 }}</td>
+            <td class="input">{{ surf_batie_hab_6 }}</td>
+            <td class="input">{{ terrain_6 }}</td>
+            <td class="input">{{ prix_ventre_6 }}</td>
+            <td class="input">{{ eur_m2_6 }}</td>
+            <td class="input"><a href="{{ google_map_6 }}">Google map</a></td>
+            <td class="input"><a href="{{ cadastre_6 }}">Cadastre</a></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td class="input">{{ date_7 }}</td>
+            <td class="input adresse"><span>{{ adresse_7 }}</span></td>
+            <td class="input">{{ typologie_7 }}</td>
+            <td class="input">{{ surf_batie_hab_7 }}</td>
+            <td class="input">{{ terrain_7 }}</td>
+            <td class="input">{{ prix_ventre_7 }}</td>
+            <td class="input">{{ eur_m2_7 }}</td>
+            <td class="input"><a href="{{ google_map_7 }}">Google map</a></td>
+            <td class="input"><a href="{{ cadastre_7 }}">Cadastre</a></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td class="input">{{ date_8 }}</td>
+            <td class="input adresse"><span>{{ adresse_8 }}</span></td>
+            <td class="input">{{ typologie_8 }}</td>
+            <td class="input">{{ surf_batie_hab_8 }}</td>
+            <td class="input">{{ terrain_8 }}</td>
+            <td class="input">{{ prix_ventre_8 }}</td>
+            <td class="input">{{ eur_m2_8 }}</td>
+            <td class="input"><a href="{{ google_map_8 }}">Google map</a></td>
+            <td class="input"><a href="{{ cadastre_8 }}">Cadastre</a></td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td class="input">{{ date_9 }}</td>
+            <td class="input adresse"><span>{{ adresse_9 }}</span></td>
+            <td class="input">{{ typologie_9 }}</td>
+            <td class="input">{{ surf_batie_hab_9 }}</td>
+            <td class="input">{{ terrain_9 }}</td>
+            <td class="input">{{ prix_ventre_9 }}</td>
+            <td class="input">{{ eur_m2_9 }}</td>
+            <td class="input"><a href="{{ google_map_9 }}">Google map</a></td>
+            <td class="input"><a href="{{ cadastre_9 }}">Cadastre</a></td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td class="input">{{ date_10 }}</td>
+            <td class="input adresse"><span>{{ adresse_10 }}</span></td>
+            <td class="input">{{ typologie_10 }}</td>
+            <td class="input">{{ surf_batie_hab_10 }}</td>
+            <td class="input">{{ terrain_10 }}</td>
+            <td class="input">{{ prix_ventre_10 }}</td>
+            <td class="input">{{ eur_m2_10 }}</td>
+            <td class="input"><a href="{{ google_map_10 }}">Google map</a></td>
+            <td class="input"><a href="{{ cadastre_10 }}">Cadastre</a></td>
+        </tr>
+        <tr>
+            <td colspan="5" class="right ">Valeur Moyenne:</td>
+            <td class="input">{{ surf_batie_hab_valeur_moyenne }}</td>
+            <td class="input">{{ terrain_valeur_moyenne }}</td>
+            <td class="input">{{ prix_ventre_valeur_moyenne }}</td>
+            <td class="input">{{ eur_m2_valeur_moyenne }}</td>
+            <td class="right "></td>
+        </tr>
+        <tr class="light_bottom">
+            <td colspan="10" class="font_small center ">Observations: la surface bâtie/hab est celle annoncée
+                ou a été, à
+                défaut, calculée </td>
+        </tr>
+    </table>
+
+    <table class="risques">
+        <tr>
+            <td colspan="8" class="title3 left lightgreen">
+                Risques Naturels et Technologiques
+            </td>
+        </tr>
+
+        <tr class="thead">
+            <td>Risques Naturels</td>
+            <td>Risque / Sévérité</td>
+            <td>Niveau</td>
+            <td>PPRN</td>
+            <td>Risques Technologiques</td>
+            <td>Risque </td>
+            <td>Rayon</td>
+            <td>Nombre</td>
+        </tr>
+        <tr>
+            <td>Inondation:</td>
+            <td class="input">{{ risque_severite_inondation }}</td>
+            <td class="input">{{ niveau_inondation }}</td>
+            <td class="input">{{ pprn_inondation }}</td>
+            <td class="right">Pollution des sols:</td>
+            <td class="input">{{ risque_inondation }}</td>
+            <td class="input">{{ rayon_inondation }}</td>
+            <td class="input">{{ nombre_inondation }}</td>
+        </tr>
+        <tr>
+            <td>Glissement de terrain:</td>
+            <td class="input">{{ risque_severite_glissement_de_terrain }}</td>
+            <td class="input">{{ niveau_glissement_de_terrain }}</td>
+            <td class="input">{{ pprn_glissement_de_terrain }}</td>
+            <td class="right">Installations industrielles:</td>
+            <td class="input">{{ risque_glissement_de_terrain }}</td>
+            <td class="input">{{ rayon_glissement_de_terrain }}</td>
+            <td class="input">{{ nombre_glissement_de_terrain }}</td>
+        </tr>
+        <tr>
+            <td>Séisme:</td>
+            <td class="input">{{ risque_severite_seisme }}</td>
+            <td class="input">{{ niveau_seisme }}</td>
+            <td class="input">{{ pprn_seisme }}</td>
+            <td class="right">Installations nucléaires:</td>
+            <td class="input">{{ risque_seisme }}</td>
+            <td class="input">{{ rayon_seisme }}</td>
+            <td class="input">{{ nombre_seisme }}</td>
+        </tr>
+        <tr>
+            <td>Feux de forêt:</td>
+            <td class="input">{{ risque_severite_feux_de_foret }}</td>
+            <td class="input">{{ niveau_feux_de_foret }}</td>
+            <td class="input">{{ pprn_feux_de_foret }}</td>
+            <td colspan="4"></td>
+        </tr>
+        <tr>
+            <td>Radon:</td>
+            <td class="input">{{ risque_severite_radon }}</td>
+            <td class="input">{{ niveau_radon }}</td>
+            <td class="input">{{ pprn_radon }}</td>
+            <td colspan="4"></td>
+        </tr>
+    </table>
+
+    <table class="qualite">
+        <tr>
+            <td colspan="9" class="title3 left lightgreen">
+                QUALITE DES SERVICES - Appréciation par typologie de services:
+            </td>
+        </tr>
+
+        <tr class="thead">
+            <td colspan="3"></td>
+            <td colspan="3">Nombre de Services à [X] Mins à pied</td>
+            <td colspan="3">Nombre de Services à [X] Mins en voiture</td>
+        </tr>
+        <tr class="thead">
+            <td>Categorie de Services</td>
+            <td>Note</td>
+            <td>Rang Commune </td>
+            <td>5 Mins</td>
+            <td>10 Mins</td>
+            <td>20 Mins</td>
+            <td>5 Mins</td>
+            <td>10 Mins</td>
+            <td>02 Mins</td>
+        </tr>
+        <tr>
+            <td>Commerces</td>
+            <td class="input">{{ note_commerces }}</td>
+            <td class="input">{{ rang_comune_commerces }}</td>
+            <td class="input">{{ services_pied_5_commerces }}</td>
+            <td class="input">{{ services_pied_10_commerces }}</td>
+            <td class="input">{{ services_pied_20_commerces }}</td>
+            <td class="input">{{ services_voiture_5_commerces }}</td>
+            <td class="input">{{ services_voiture_10_commerces }}</td>
+            <td class="input">{{ services_voiture_20_commerces }}</td>
+        </tr>
+        <tr>
+            <td>Enseignement - 1er Degré</td>
+            <td class="input">{{ note_enseignement_1 }}</td>
+            <td class="input">{{ rang_comune_enseignement_1 }}</td>
+            <td class="input">{{ services_pied_5_enseignement_1 }}</td>
+            <td class="input">{{ services_pied_10_enseignement_1 }}</td>
+            <td class="input">{{ services_pied_20_enseignement_1 }}</td>
+            <td class="input">{{ services_voiture_5_enseignement_1 }}</td>
+            <td class="input">{{ services_voiture_10_enseignement_1 }}</td>
+            <td class="input">{{ services_voiture_20_enseignement_1 }}</td>
+        </tr>
+        <tr>
+            <td>Enseignement - 2e Degré</td>
+            <td class="input">{{ note_enseignement_2 }}</td>
+            <td class="input">{{ rang_comune_enseignement_2 }}</td>
+            <td class="input">{{ services_pied_5_enseignement_2 }}</td>
+            <td class="input">{{ services_pied_10_enseignement_2 }}</td>
+            <td class="input">{{ services_pied_20_enseignement_2 }}</td>
+            <td class="input">{{ services_voiture_5_enseignement_2 }}</td>
+            <td class="input">{{ services_voiture_10_enseignement_2 }}</td>
+            <td class="input">{{ services_voiture_20_enseignement_2 }}</td>
+        </tr>
+        <tr>
+            <td>Enseignement - Supérieur</td>
+            <td class="input">{{ note_enseignement_superieur }}</td>
+            <td class="input">{{ rang_comune_enseignement_superieur }}</td>
+            <td class="input">{{ services_pied_5_enseignement_superieur }}</td>
+            <td class="input">{{ services_pied_10_enseignement_superieur }}</td>
+            <td class="input">{{ services_pied_20_enseignement_superieur }}</td>
+            <td class="input">{{ services_voiture_5_enseignement_superieur }}</td>
+            <td class="input">{{ services_voiture_10_enseignement_superieur }}</td>
+            <td class="input">{{ services_voiture_20_enseignement_superieur }}</td>
+        </tr>
+        <tr>
+            <td>Santé</td>
+            <td class="input">{{ note_sante }}</td>
+            <td class="input">{{ rang_comune_sante }}</td>
+            <td class="input">{{ services_pied_5_sante }}</td>
+            <td class="input">{{ services_pied_10_sante }}</td>
+            <td class="input">{{ services_pied_20_sante }}</td>
+            <td class="input">{{ services_voiture_5_sante }}</td>
+            <td class="input">{{ services_voiture_10_sante }}</td>
+            <td class="input">{{ services_voiture_20_sante }}</td>
+        </tr>
+        <tr>
+            <td>Services Publics</td>
+            <td class="input">{{ note_services_publics }}</td>
+            <td class="input">{{ rang_comune_services_publics }}</td>
+            <td class="input">{{ services_pied_5_services_publics }}</td>
+            <td class="input">{{ services_pied_10_services_publics }}</td>
+            <td class="input">{{ services_pied_20_services_publics }}</td>
+            <td class="input">{{ services_voiture_5_services_publics }}</td>
+            <td class="input">{{ services_voiture_10_services_publics }}</td>
+            <td class="input">{{ services_voiture_20_services_publics }}</td>
+        </tr>
+        <tr>
+            <td>Sports & Loisir</td>
+            <td class="input">{{ note_sports_loisir }}</td>
+            <td class="input">{{ rang_comune_sports_loisir }}</td>
+            <td class="input">{{ services_pied_5_sports_loisir }}</td>
+            <td class="input">{{ services_pied_10_sports_loisir }}</td>
+            <td class="input">{{ services_pied_20_sports_loisir }}</td>
+            <td class="input">{{ services_voiture_5_sports_loisir }}</td>
+            <td class="input">{{ services_voiture_10_sports_loisir }}</td>
+            <td class="input">{{ services_voiture_20_sports_loisir }}</td>
+        </tr>
+        <tr>
+            <td>Transports</td>
+            <td class="input">{{ note_transports }}</td>
+            <td class="input">{{ rang_comune_transports }}</td>
+            <td class="input">{{ services_pied_5_transports }}</td>
+            <td class="input">{{ services_pied_10_transports }}</td>
+            <td class="input">{{ services_pied_20_transports }}</td>
+            <td class="input">{{ services_voiture_5_transports }}</td>
+            <td class="input">{{ services_voiture_10_transports }}</td>
+            <td class="input">{{ services_voiture_20_transports }}</td>
+        </tr>
+        <tr>
+            <td>Services au public</td>
+            <td class="input">{{ note_services_au_public }}</td>
+            <td class="input">{{ rang_comune_services_au_public }}</td>
+            <td class="input">{{ services_pied_5_services_au_public }}</td>
+            <td class="input">{{ services_pied_10_services_au_public }}</td>
+            <td class="input">{{ services_pied_20_services_au_public }}</td>
+            <td class="input">{{ services_voiture_5_services_au_public }}</td>
+            <td class="input">{{ services_voiture_10_services_au_public }}</td>
+            <td class="input">{{ services_voiture_20_services_au_public }}</td>
+        </tr>
+        <tr class="light_bottom">
+            <td>Hébergement</td>
+            <td class="input">{{ note_hebergement }}</td>
+            <td class="input">{{ rang_comune_hebergement }}</td>
+            <td class="input">{{ services_pied_5_hebergement }}</td>
+            <td class="input">{{ services_pied_10_hebergement }}</td>
+            <td class="input">{{ services_pied_20_hebergement }}</td>
+            <td class="input">{{ services_voiture_5_hebergement }}</td>
+            <td class="input">{{ services_voiture_10_hebergement }}</td>
+            <td class="input">{{ services_voiture_20_hebergement }}</td>
+        </tr>
+    </table>
+
+    <div class='title3 padd lightgreen'>
+        PHOTOS / PLANS
+    </div>
+    <div class='pics'>
+        <div><img src='https://picsum.photos/id/1045/800/360' width='800' height='360' alt='img'></div>
+        <div><img src='https://picsum.photos/id/1049/800/360' width='800' height='360' alt='img'></div>
+        <div><img src='https://picsum.photos/id/1047/800/360' width='800' height='360' alt='img'></div>
+        <div><img src='https://picsum.photos/id/1048/800/360' width='800' height='360' alt='img'></div>
+    </div>
+    <div class='copyright padd center'>
+        Document protégé par copyright
+    </div>
+</div>
+
+</html>
